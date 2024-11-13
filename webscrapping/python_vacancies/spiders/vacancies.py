@@ -3,13 +3,14 @@ from typing import Any
 import scrapy
 from scrapy.http import Response
 
+from python_vacancies.url_config import DOU_DOMAIN, DOU_SCRAPE_URL
 from selenium_vacancy.selenium_chrome import DouChromeDriver
 
 
 class VacanciesSpider(scrapy.Spider):
     name = "vacancies"
-    allowed_domains = ["jobs.dou.ua"]
-    start_urls = ["https://jobs.dou.ua/vacancies/?category=Python"]
+    allowed_domains = [DOU_DOMAIN]
+    start_urls = [DOU_SCRAPE_URL]
 
     def parse(self, response: Response, **kwargs: Any) -> Any:
         with DouChromeDriver() as driver:
