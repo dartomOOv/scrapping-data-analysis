@@ -25,4 +25,7 @@ scrapy crawl vacancies -o vacancies.csv
 Open the file `vacancies.ipynb` in `dataanalysis/dou_vacancies_analysis/` and run the given cell. As a result, a bar chart will appear, visualising the number of technologies mention in vacancies 
 
 The result that you may see:
+
 ![img.png](img.png)
+
+#### Also, you can save current chart by running next cell, which will save it to `dataanalysis/dou_vacancies_analysis/charts/`
